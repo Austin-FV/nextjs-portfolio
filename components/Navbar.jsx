@@ -155,29 +155,22 @@ const Navbar = () => {
 
             <div>
               <div className="grid grid-cols-2 mx-auto w-2/5 gap-5 aspect-square">
-                <div className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
-                  <Link href={"https://www.linkedin.com/in/austin-fv/"} target="_blank" title="LinkedIn">
-                    <AiFillLinkedin size={30} />
-                  </Link>
-                </div>
 
-                <div className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
-                  <Link href={"https://github.com/Austin-FV"} target="_blank" title="GitHub">
-                    <AiFillGithub size={30} />
-                  </Link>
-                </div>
+                <Link href={"https://www.linkedin.com/in/austin-fv/"} target="_blank" title="LinkedIn" className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
+                  <AiFillLinkedin size={30} />
+                </Link>
 
-                <div className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
-                  <Link href={"mailto:austinfv01@gmail.com"} title="Email">
-                    <AiFillMail size={30} />
-                  </Link>
-                </div>
+                <Link href={"https://github.com/Austin-FV"} target="_blank" title="GitHub" className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
+                  <AiFillGithub size={30} />
+                </Link>
 
-                <div className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
-                  <Link href={"/AFV_Resume.pdf"} target="_blank" title="Resume">
-                    <FaBook size={30} />
-                  </Link>
-                </div>
+                <Link href={"mailto:austinfv01@gmail.com"} title="Email" className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
+                  <AiFillMail size={30} />
+                </Link>
+
+                <Link href={"/AFV_Resume.pdf"} target="_blank" title="Resume" className="flex items-center justify-center rounded-xl shadow-md p-3 cursor-pointer bg-teal-800 duration-100 hover:scale-105">
+                  <FaBook size={30} />
+                </Link>
 
               </div>
 
