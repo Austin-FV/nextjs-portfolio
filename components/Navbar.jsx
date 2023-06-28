@@ -141,8 +141,8 @@ const Navbar = () => {
 
               {
                 links.map(link => (
-                  <li className="py-4 text-2xl tracking-wider rounded-md duration-100 hover:scale-105 mx-12 ">
-                    <Link key={link.id} href={`/#${link.link}`} onClick={() => setNavigation(false)} className="">
+                  <li key={link.id} className="py-4 text-2xl tracking-wider rounded-md duration-100 hover:scale-105 mx-12 ">
+                    <Link href={`/#${link.link}`} onClick={() => setNavigation(false)} className="">
                       {link.link}
                     </Link>
                   </li>

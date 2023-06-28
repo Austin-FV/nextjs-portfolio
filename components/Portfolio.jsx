@@ -75,7 +75,7 @@ const Portfolio = () => {
                     {
                         projects.map(({ id, title, imageSrc, url, description, tech }) => (
                             // <Link key={id} href={'/#'}>
-                            <div className='group shadow-md shadow-gray-600 overflow-hidden rounded-md aspect-square flex items-center justify-center relative'>
+                            <div key={id} className='group shadow-md shadow-gray-600 overflow-hidden rounded-md aspect-square flex items-center justify-center relative'>
                                 <Image src={imageSrc} alt={title} title={title} className='rounded-md duration-200 aspect-square hover:scale-110 object-cover ' />
 
                                 <div className='absolute bottom-0 top-0 left-0 right-0 px-4 py-10 bg-gray-800 opacity-90 text-center'>
