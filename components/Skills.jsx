@@ -122,7 +122,7 @@ const Skills = () => {
             <h1 className='text-5xl md:text-6xl tracking-wider uppercase pt-20 font-bold dark:text-gray-100'>Skills</h1>
             <p className='text-md py-5 leading-8 text-gray-800 dark:text-gray-300'>Here are some of the
                 <span className='text-teal-600'> technologies </span>I have worked with!
-                <br/><span className='text-teal-600 font-semibold'><Link href="/#portfolio">See How!</Link></span></p>
+                <br/><span className='text-teal-600 font-semibold'><Link href="/#portfolio" scroll={false}>See How!</Link></span></p>
 
 
             <h2 className='text-3xl py-1 dark:text-gray-200'>Languages</h2>
