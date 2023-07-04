@@ -34,7 +34,7 @@ const Skills = () => {
             name: "Dart",
             imgPath: "dart-original.svg"
         },
-        
+
         {
             name: "Ruby",
             imgPath: "ruby-original.svg"
@@ -122,14 +122,19 @@ const Skills = () => {
             <h1 className='text-5xl md:text-6xl tracking-wider uppercase pt-20 font-bold dark:text-gray-100'>Skills</h1>
             <p className='text-md py-5 leading-8 text-gray-800 dark:text-gray-300'>Here are some of the
                 <span className='text-teal-600'> technologies </span>I have worked with!
-                <br/><span className='text-teal-600 font-semibold'><Link href="/#portfolio" scroll={false}>See How!</Link></span></p>
+                <br /><span className='text-teal-600 font-semibold'><Link href="/#portfolio" scroll={false}>See How!</Link></span></p>
 
 
             <h2 className='text-3xl py-1 dark:text-gray-200'>Languages</h2>
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-2 mb-10'>
                 {/* <motion.div> */}
                 {languages.map((skill) => (
-                    <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 1 }} key={skill.name}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: [1] }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        key={skill.name}
                         className='flex flex-col items-center justify-between gap-4 p-4 shadow-md shadow-blue-300 rounded-xl outline-offset-8 hover:scale-105 ease-in duration-300 dark:shadow-blue-300 dark:hover:bg-gray-800 hover:bg-gray-200'>
 
                         <div className=''>
@@ -149,11 +154,16 @@ const Skills = () => {
             <div className='grid grid-cols-3 gap-4 mt-2 mb-10'>
                 {/* <motion.div> */}
                 {cloudplatforms.map((skill) => (
-                    <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 1 }} key={skill.name}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: [1] }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        key={skill.name}
                         className='flex flex-col items-center justify-between gap-4 p-4 shadow-md shadow-blue-300 rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-cyan-300 dark:hover:bg-gray-800 hover:bg-gray-200'>
 
                         <div className=''>
-                            <Image src={"/skill-icons/" + skill.imgPath} alt={skill.name} width={64} height={64} title={skill.name} className=''/>
+                            <Image src={"/skill-icons/" + skill.imgPath} alt={skill.name} width={64} height={64} title={skill.name} className='' />
                         </div>
                         <h3 className='font-semibold dark:text-gray-300'>{skill.name}</h3>
 
@@ -169,8 +179,14 @@ const Skills = () => {
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-2 mb-10'>
                 {/* <motion.div> */}
                 {tools.map((skill) => (
-                    <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 1 }} key={skill.name}
-                        className='flex flex-col items-center  justify-between gap-4 p-4 shadow-md shadow-blue-300 rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-teal-300 dark:hover:bg-gray-800 hover:bg-gray-200'>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: [1] }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        key={skill.name}
+                        className='flex flex-col items-center  justify-between gap-4 p-4 shadow-md shadow-blue-300 rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-teal-300 dark:hover:bg-gray-800 hover:bg-gray-200'
+                    >
 
                         <div className=''>
                             <Image src={"/skill-icons/" + skill.imgPath} alt={skill.name} width={64} height={64} title={skill.name} />

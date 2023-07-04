@@ -4,6 +4,8 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { MdExpandMore } from "react-icons/md"
+
 
 // TEMPORARY FOR DESIGN, WILL NEED MY OWN IMAGES
 import design from '../public/design.png'
@@ -22,6 +24,15 @@ import Modal from './Modal'
 const Portfolio = () => {
 
     const projects = [
+        {
+            id: 0,
+            title: "My Portfolio",
+            imageSrc: web1,
+            url: "https://github.com/Austin-FV/nextjs-portfolio",
+            description: "Utlizing React and Next.js to create a portfolio to showcase my abilities to everyone! Including styling with Tailwind CSS and animations from the Framer Motion library. Website is fully responsive with UI built for desktop and mobile browsers.",
+            tech: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Framer Motion"],
+            date: "June 2023 - Present"
+        },
         // {
         //     id: 1,
         //     title: "GPX Parser",
@@ -67,20 +78,43 @@ const Portfolio = () => {
                     Here is a showcase of some of my projects that can also be found on<span className='text-teal-500 font-semibold'><a href="https://github.com/Austin-FV" target='_blank'> Github</a></span>!
                 </p> */}
                 <p className='py-4 dark:text-gray-300 font-medium'>
-                    Uh Oh!<br/> Currently Re-Imagining this Section, in the meantime visit my <span className='text-teal-500 font-semibold'><a href="https://github.com/Austin-FV" target='_blank'> GitHub </a></span>to view my projects!
+                    Uh Oh! Currently Re-Creating this Section.<br/>In the meantime visit my <span className='text-teal-500 font-semibold'><a href="https://github.com/Austin-FV" target='_blank'> GitHub </a></span>to view my projects!
                 </p>
 
-                <div className='max-w-5xl mx-auto grid md:grid-cols-2 gap-8'>
+                <div className='max-w-5xl min-h-fit mx-auto'>
 
                     {
                         projects.map(({ id, title, imageSrc, url, description, tech }) => (
                             // <Link key={id} href={'/#'}>
-                            <div key={id} className='group shadow-md shadow-gray-600 overflow-hidden rounded-md aspect-square flex items-center justify-center relative'>
-                                <Image src={imageSrc} alt={title} title={title} className='rounded-md duration-200 aspect-square hover:scale-110 object-cover ' />
+                            <div key={id} className='shadow-md shadow-gray-600 rounded-md p-6 dark:text-gray-200 max-w-full'>
 
-                                <div className='absolute bottom-0 top-0 left-0 right-0 px-4 py-10 bg-gray-800 opacity-90 text-center'>
-                                    <p className='text-white font-semibold'>{title}</p>
+
+                                <div className='font-bold text-2xl flex text-teal-600'>
+                                    <Link href={url} target='_blank'>
+                                        <h1>{title}</h1>
+                                    </Link>
                                 </div>
+
+                                <div className='text-left p-2'>
+                                    <p>{description}</p>
+                                </div>
+
+                                <div className='flex gap-0 font-semibold border-t-2 pt-1 border-teal-600 text-left tracking-wider'>
+
+                                    <p className=''>
+                                        {tech.join(" , ")}
+                                    </p>
+                                </div>
+
+
+                                {/* <div className='flex items-center text-center'>
+                                    <Link href={url} target='_blank'>
+                                        <div className='rounded-xl bg-black w-max p-10'>
+                                            <AiFillGithub size={50}></AiFillGithub>
+
+                                        </div>
+                                    </Link>
+                                </div> */}
                             </div>
                             // </Link>
                         ))
@@ -88,6 +122,20 @@ const Portfolio = () => {
 
                 </div>
 
+
+            </div>
+
+            <div className='flex justify-center'>
+
+                <Link href='https://github.com/Austin-FV' target='_blank' title='GitHub'>
+                    <div className='group flex items-center justify-center bg-teal-600 text-white py-3 px-5 font-bold uppercase rounded-md tracking-wider ease-in duration-100 hover:bg-teal-700 hover:ring ring-gray-400 gap-1'>
+                        <div>view all</div> 
+                        {/* <AiFillGithub size={25}/> */}
+                        {/* <span className='-rotate-90 duration-100 ease-in group-hover:rotate-0'>
+                            <MdExpandMore size={25}></MdExpandMore>
+                        </span> */}
+                    </div>
+                </Link>
             </div>
 
             {/* <Modal></Modal> */}
