@@ -10,10 +10,10 @@ const Skills = () => {
             name: "Python",
             imgPath: "python-original.svg"
         },
-        {
-            name: "C",
-            imgPath: "c-original.svg"
-        },
+        // {
+        //     name: "C",
+        //     imgPath: "c-original.svg"
+        // },
         // {
         //     name: "C++",
         //     imgPath: "cplusplus-original.svg"
