@@ -18,10 +18,10 @@ const Skills = () => {
         //     name: "C++",
         //     imgPath: "cplusplus-original.svg"
         // },
-        // {
-        //     name: "C#",
-        //     imgPath: "csharp-original.svg"
-        // },
+        {
+            name: "C#",
+            imgPath: "csharp-original.svg"
+        },
         {
             name: "Java",
             imgPath: "java-original.svg"
@@ -59,8 +59,16 @@ const Skills = () => {
             imgPath: "nodejs-original.svg"
         },
         {
+            name: "ASP.NET Core",
+            imgPath: "dotnetcore-original.svg"
+        },
+        {
             name: "MySQL",
             imgPath: "mysql-original.svg"
+        },
+        {
+            name: "MS SQL Server",
+            imgPath: "microsoftsqlserver-plain.svg"
         },
         {
             name: "Git",
