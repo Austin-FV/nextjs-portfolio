@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
 
             <div className=''>
-                <p className='text-gray-500'>© 2023 Austin Varghese. <br></br>All Rights Reserved</p>
+                <p className='text-gray-500'>© 2026 Austin Varghese. <br></br>All Rights Reserved</p>
             </div>
 
         </div>
